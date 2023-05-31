@@ -131,7 +131,7 @@ projects.forEach((project, index) => {
     projectsContainer.appendChild(workTitlePostDiv);
   } else {
     const tagsList = project.tags
-      .map((tag) => `<li class="card-items">${tag}</li>`)
+      .map((tag) => `<li class="tag-items">${tag}</li>`)
       .join("");
 
     const projectCard = document.createElement("div");
