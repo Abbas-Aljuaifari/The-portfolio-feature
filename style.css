@@ -883,6 +883,16 @@ footer ul {
     padding-bottom: 9.2%;
   }
 
+  .popup-tag-list-projects li {
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    border: 1px solid #979493;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
   .my-skills ul li {
     text-align: start;
     padding-top: 3.5%;
@@ -960,16 +970,6 @@ footer ul {
     text-align: left;
     font-style: normal;
     margin: 5px;
-  }
-
-  .popup-tag-list-projects li {
-    font-family: "Poppins", sans-serif;
-    text-align: left;
-    border: 1px solid #979493;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
   }
 
   .popup-info-project {
