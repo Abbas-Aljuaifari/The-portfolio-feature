@@ -8,7 +8,7 @@ const projects = [
     image3: "./images/modal.png",
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. This has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
-    tags: ["HTML", "CSS", "Bootstrap", "Ruby"],
+    tags: ["HTML", "CSS", "Bootstrap"],
     demoLink: "https://abbas-aljuaifari.github.io/The-Portfolio/",
     codeLink: "https://github.com/Abbas-Aljuaifari/The-Portfolio",
   },
@@ -194,23 +194,23 @@ const popup = document.createElement("div");
 function createPopup(project) {
   const popupContainer = document.createElement("div");
   popupContainer.id = "popup-container";
-  popupContainer.className = "popup-window";
+  popupContainer.className = "main-popup-window";
 
   const popupHolder = document.createElement("div");
-  popupHolder.className = "popup-holder";
+  popupHolder.className = "popup-holder-container";
   popupContainer.appendChild(popupHolder);
 
   const closeBtnHolder = document.createElement("div");
-  closeBtnHolder.className = "popup-close-btn-holder";
+  closeBtnHolder.className = "my-pop-close-btn-holder";
   popupHolder.appendChild(closeBtnHolder);
 
   const titleXBtn = document.createElement("div");
-  titleXBtn.className = "title-xbtn";
+  titleXBtn.className = "popup-title-xbtn";
   closeBtnHolder.appendChild(titleXBtn);
 
   const popupHeader = document.createElement("h1");
   popupHeader.id = "popup-header";
-  popupHeader.className = "project-heading-pop";
+  popupHeader.className = "my-project-heading-pop";
   popupHeader.textContent = project.name;
   titleXBtn.appendChild(popupHeader);
 
@@ -234,7 +234,7 @@ function createPopup(project) {
   xBtnSvg.appendChild(xBtnPath);
 
   const popupTagList = document.createElement("ul");
-  popupTagList.className = "popup-tag-list";
+  popupTagList.className = "popup-tag-list-projects";
   closeBtnHolder.appendChild(popupTagList);
 
   for (const tag of project.tags) {
@@ -245,29 +245,29 @@ function createPopup(project) {
   }
 
   const popupInfo = document.createElement("div");
-  popupInfo.className = "popup-info";
+  popupInfo.className = "popup-info-project";
   popupHolder.appendChild(popupInfo);
 
   const popupImage = document.createElement("img");
   popupImage.id = "popup-image";
-  popupImage.className = "popup-image";
+  popupImage.className = "popup-project-image";
   popupImage.src = project.image3;
   popupImage.alt = "post image";
   popupInfo.appendChild(popupImage);
 
   const popupInfoHolder = document.createElement("div");
-  popupInfoHolder.className = "popup-info-holder";
+  popupInfoHolder.className = "popup-info-project-holder";
   popupInfo.appendChild(popupInfoHolder);
 
   const popupDescription = document.createElement("p");
   popupDescription.id = "popup-description";
-  popupDescription.className = "popup-description";
+  popupDescription.className = "popup-project-description";
   popupDescription.textContent = project.description;
   popupInfoHolder.appendChild(popupDescription);
 
   const popupDescription1 = document.createElement("p");
   popupDescription1.id = "popup-description1";
-  popupDescription1.className = "popup-description desktop-des1";
+  popupDescription1.className = "popup-project-description desktop-des1";
   popupDescription1.textContent = project.description;
   popupInfoHolder.appendChild(popupDescription1);
 
@@ -277,7 +277,7 @@ function createPopup(project) {
 
   const seeLivePopup = document.createElement("a");
   seeLivePopup.id = "seeLivePopup";
-  seeLivePopup.className = "popup-btn btn";
+  seeLivePopup.className = "popup-project-btn btn";
   seeLivePopup.href = project.demoLink;
   seeLivePopup.textContent = "See live";
   popupBtnHolder.appendChild(seeLivePopup);
@@ -286,9 +286,26 @@ function createPopup(project) {
     "http://www.w3.org/2000/svg",
     "svg"
   );
-  seeLiveSvg.setAttribute("width", "18");
-  seeLiveSvg.setAttribute("height", "18");
-  seeLiveSvg.setAttribute("viewBox", "0 0 18 18");
+  // seeLiveSvg.setAttribute("width", "18");
+  // seeLiveSvg.setAttribute("height", "18");
+  // seeLiveSvg.setAttribute("viewBox", "0 0 18 18");
+  // seeLivePopup.appendChild(seeLiveSvg);
+
+  // const seeLivePath = document.createElementNS(
+  //   "http://www.w3.org/2000/svg",
+  //   "path"
+  // );
+  // seeLivePath.setAttribute("fill-rule", "evenodd");
+  // seeLivePath.setAttribute("clip-rule", "evenodd");
+  // seeLivePath.setAttribute(
+  //   "d",
+  //   "M2 9C2 5.13401 5.13401 2 9 2C9.55229 2 10 1.55228 10 1C10 0.447715 9.55229 0 9 0C4.02944 0 0 4.02944 0 9C0 13.9706 4.02944 18 9 18C13.9706 18 18 13.9706 18 9C18 8.44772 17.5523 8 17 8C16.4477 8 16 8.44772 16 9C16 12.866 12.866 16 9 16C5.13401 16 2 12.866 2 9Z"
+  // );
+  // seeLiveSvg.appendChild(seeLivePath);
+
+  seeLiveSvg.setAttribute("width", "24");
+  seeLiveSvg.setAttribute("height", "24");
+  seeLiveSvg.setAttribute("viewBox", "0 0 24 24");
   seeLivePopup.appendChild(seeLiveSvg);
 
   const seeLivePath = document.createElementNS(
@@ -299,13 +316,12 @@ function createPopup(project) {
   seeLivePath.setAttribute("clip-rule", "evenodd");
   seeLivePath.setAttribute(
     "d",
-    "M2 9C2 5.13401 5.13401 2 9 2C9.55229 2 10 1.55228 10 1C10 0.447715 9.55229 0 9 0C4.02944 0 0 4.02944 0 9C0 13.9706 4.02944 18 9 18C13.9706 18 18 13.9706 18 9C18 8.44772 17.5523 8 17 8C16.4477 8 16 8.44772 16 9C16 12.866 12.866 16 9 16C5.13401 16 2 12.866 2 9Z"
+    "M5 12C5 8.13401 8.13401 5 12 5C12.5523 5 13 4.55228 13 4C13 3.44772 12.5523 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12ZM16 3C15.4477 3 15 3.44772 15 4C15 4.55228 15.4477 5 16 5H17.5858L11.2929 11.2929C10.9024 11.6834 10.9024 12.3166 11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071L19 6.41421V8C19 8.55228 19.4477 9 20 9C20.5523 9 21 8.55228 21 8V4C21 3.44772 20.5523 3 20 3H16Z"
   );
   seeLiveSvg.appendChild(seeLivePath);
-
   const seeSourcePopup = document.createElement("a");
   seeSourcePopup.id = "seeSourcePopup";
-  seeSourcePopup.className = "popup-btn btn";
+  seeSourcePopup.className = "popup-project-btn btn";
   seeSourcePopup.href = project.codeLink;
   seeSourcePopup.textContent = "See source";
   popupBtnHolder.appendChild(seeSourcePopup);
@@ -330,7 +346,7 @@ function createPopup(project) {
   seeSourceSvg.appendChild(seeSourcePath);
 
   document.body.appendChild(popupContainer);
-  const xPopup = document.querySelector(".title-xbtn");
+  const xPopup = document.querySelector(".popup-title-xbtn");
   xPopup.addEventListener("click", () => {
     popupContainer.remove();
   });
