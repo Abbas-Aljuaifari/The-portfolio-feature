@@ -63,7 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://abbas-aljuaifari.github.io/The-Portfolio/)
+- [Live Demo Link](https://abbas-aljuaifari.github.io/The-portfolio-feature/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,12 +142,7 @@ npx eslint .
 
 ## :busts_in_silhouette: Collabrations <a name="collabrationns"></a>
 
-:bust_in_silhouette: **JansueT**
-
-- GitHub: [@githubhandle](https://github.com/JansueT)
-- instagram: [@cansuetas](https://instagram.com/cansuetas)
-- twitter: [@cansu8tas](https://twitter.com/cansu8tas)
-- linkedIn: [@LinkedIn](https://www.linkedin.com/in/cansu-tas-467844251/)
+:bust_in_silhouette: \*\* \*\*
 
 <!-- FUTURE FEATURES -->
 
