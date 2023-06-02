@@ -217,7 +217,7 @@ function createPopup(project) {
   xBtnSvg.className = ".xBtn";
   xBtnSvg.setAttribute("width", "30");
   xBtnSvg.setAttribute("height", "30");
-  xBtnSvg.setAttribute("viewBox", "0 0 24 24');
+  xBtnSvg.setAttribute("viewBox", "0 0 24 24");
   titleXBtn.appendChild(xBtnSvg);
 
   const xBtnPath = document.createElementNS(
